@@ -1,6 +1,6 @@
-import Favourite from "./Favourite";
-import FavouriteListModal from "./FavouriteListModal";
-import Logo from "./logo";
+import Favorite from "./Favorite";
+import FavoriteListModal from "./FavoriteListModal";
+import Logo from "./Logo";
 import Search from "./Search";
 
 function Header() {
@@ -10,8 +10,8 @@ function Header() {
 			<Logo/>
 			<div className="flex items-center gap-4 relative">
 				<Search/>
-				<Favourite/>
-				<FavouriteListModal/>
+				<Favorite/>
+				<FavoriteListModal/>
 			</div>
 		</nav>
 	</header>
