@@ -1,11 +1,13 @@
 import Header from "./components/header/Header"
 import WeatherBoard from "./components/weather/WeatherBoard"
+import { WeatherProvider } from "./provider"
 
 
 function App() {
 
   return (
-    <div className="grid place-items-center h-screen-100">
+    <WeatherProvider>
+      <div className="grid place-items-center h-screen-100">
       <Header/>
       <main>
         <section>
@@ -13,6 +15,7 @@ function App() {
         </section>
       </main>
     </div>
+    </WeatherProvider>
   )
 }
 
