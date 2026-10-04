@@ -7,7 +7,7 @@ function App() {
 
   return (
     <WeatherProvider>
-      <div className="grid place-items-center h-screen-100">
+      <div className="grid place-items-center h-screen">
       <Header/>
       <main>
         <section>
