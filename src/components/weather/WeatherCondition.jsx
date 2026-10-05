@@ -4,11 +4,11 @@ import HumidityIcon from '../../assets/icons/humidity.svg';
 import CloudIcon from '../../assets/icons/cloud.svg';
 import WindIcon from '../../assets/icons/wind.svg';
 import { useContext } from 'react';
-import { weatherContext } from '../../context';
+import { WeatherContext } from '../../context';
 
 export default function WeatherCondition(){
 
-  const {weatherData} = useContext(weatherContext);
+  const {weatherData} = useContext(WeatherContext);
 
   const {maxTemperature, minTemperature, humidity, cloudPercentage, wind, climate} = weatherData;
 

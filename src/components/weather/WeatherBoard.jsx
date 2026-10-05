@@ -2,10 +2,10 @@ import AddToFavorite from "./AddToFavorite";
 import WeatherHeadline from './WeatherHeadline';
 import WeatherCondition from './WeatherCondition';
 import { useContext } from "react";
-import { weatherContext } from "../../context";
+import { WeatherContext } from "../../context";
 
 export default function WeatherBoard() {
-  const { loading } = useContext(weatherContext);
+  const { loading } = useContext(WeatherContext);
   console.log("loading", loading);
   return (
     <div className="container">

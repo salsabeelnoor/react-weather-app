@@ -6,11 +6,11 @@ import RainIcon from '../../assets/rainy.svg';
 import Thunder from '../../assets/thunder.svg';  
 import PIN from '../../assets/pin.svg';
 import { useContext } from 'react';
-import { weatherContext } from '../../context';
+import { WeatherContext } from '../../context';
 import { getFormattedDate } from '../../utils/date-util';
 
 export default function WeatherHeadline(){
-  const { weatherData } = useContext(weatherContext);
+  const { weatherData } = useContext(WeatherContext);
   const {climate, location, temperature, time} = weatherData;
   
   function getWeatherIcon(climate) {

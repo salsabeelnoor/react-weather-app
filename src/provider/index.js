@@ -1,3 +1,4 @@
+import FavoriteProvider from "./favoriteProvider";
 import WeatherProvider from "./weatherProvider";
 
-export {WeatherProvider};
+export {WeatherProvider,  FavoriteProvider};
