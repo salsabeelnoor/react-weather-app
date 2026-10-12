@@ -4,11 +4,12 @@ import { LocationContext } from '../../context';
 import { getLocationByName } from '../../../../rnext/src/data/location-data';
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState("");
-  const {selectedLocation, setSelectedLocation} = useContext(LocationContext);
+  const {setSelectedLocation} = useContext(LocationContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const fetchedLocation = getLocationByName(searchTerm);
+    console.log(fetchedLocation);
     setSelectedLocation({...fetchedLocation});
   }
 

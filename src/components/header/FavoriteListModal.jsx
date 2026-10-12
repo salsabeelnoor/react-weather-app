@@ -1,7 +1,8 @@
 import { useContext } from "react";
-import { FavoriteContext } from "../../context";
+import { FavoriteContext, LocationContext } from "../../context";
 export default function FavoriteListModal() {
   const {favorites} = useContext(FavoriteContext);
+  const {setSelectedLocation} = useContext(LocationContext)
   return (
     <div className="max-w-xs py-4 bg-white rounded-md border-gray-500 absolute right-0 top-16 text-black shadow-lg ">
       <h3 className="text-lg font-bold px-4">Favourite Locations</h3>
@@ -9,7 +10,9 @@ export default function FavoriteListModal() {
         {
           favorites.length > 0 ? (
             favorites.map((fav) => (
-              <li key={fav.location} className="hover:bg-gray-200">{fav.location}</li>
+              <li key={fav.location} className="hover:bg-gray-200">
+                <a onClick={() => setSelectedLocation({...fav})}>{fav.location}</a>
+              </li>
             ))
           ) : (
             <p>Nothing is added to favorite</p>
